@@ -18,6 +18,8 @@ P.S. [An O(log(n)) solution](https://leetcode.com/problems/climbing-stairs/discu
 
 And from the article mentioned above, [this answer](https://math.stackexchange.com/a/784723) on StackExchange have a prove about Fibonacci sequence with matrics.
 
+I mistakenly had `const c11 = A[1][0] * B[0][1] + A[1][1] * B[1][1]` to `const c11 = A[1][0] * B[0][0] + A[1][1] * B[1][1]`, and it still passed. 😀 I found this mistake from trying to implement exponentiating by squaring method. The wrong outputs show when the input is 9, 17, and 35.
+
 ```javascript
 "use strict"
 /**
