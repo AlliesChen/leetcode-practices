@@ -1,6 +1,6 @@
 # Climbing Stairs
 
-Problem: https://leetcode.com/problems/climbing-stairs/
+Question: https://leetcode.com/problems/climbing-stairs/
 
 ## Solution
 

@@ -1,6 +1,6 @@
 # Best Time To Buy And Sell Stock
 
-Problem: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+Question: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
 [Kadane’s Algorithm — (Dynamic Programming) — How and Why does it Work? | by Rohit Singhal | Medium](https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d) has good perspectives about the topics and with nice diagram to help understand them.
 

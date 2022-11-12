@@ -1,6 +1,6 @@
 # Maximum Subarray
 
-Problem: https://leetcode.com/problems/maximum-subarray/
+Question: https://leetcode.com/problems/maximum-subarray/
 
 ## Solution
 
