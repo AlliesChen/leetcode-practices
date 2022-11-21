@@ -2,7 +2,11 @@
 
 Question: https://leetcode.com/problems/merge-two-sorted-lists/
 
-## Solution
+Refer to [the solution by artod](https://leetcode.com/problems/merge-two-sorted-lists/solutions/1826693/python3-merging-explained/):
+
+1. Create a new `ListNode` called dummy as the `head` reference for the answer to submit.
+2. `cur` is needed as a pointer to mark the end of the `dummy` list.
+3. Once a list has come to the end, link the `cur.next` to the head of the remains of the other list.
 
 ```javascript
 /**
@@ -17,34 +21,24 @@ Question: https://leetcode.com/problems/merge-two-sorted-lists/
  * @param {ListNode} list2
  * @return {ListNode}
  */
-var mergeTwoLists = function (list1, list2) {
-  let head = null;
-  let current;
-  while (list1 || list2) {
-    let next;
-    if (!list1) {
-      next = list2;
-      list2 = list2.next;
-    } else if (!list2) {
-      next = list1;
-      list1 = list1.next;
-    } else {
-      if (list1.val <= list2.val) {
-        next = list1;
-        list1 = list1.next;
-      } else {
-        next = list2;
-        list2 = list2.next;
-      }
+var mergeTwoLists = function(list1, list2) {
+    const dummy = new ListNode;
+    let cur = dummy;
+    while (list1 && list2) {
+        if(list1.val < list2.val) {
+            cur.next = list1;
+            list1 = list1.next;
+        } else {
+            cur.next = list2;
+            list2 = list2.next;
+        }
+        cur = cur.next;
     }
-    if (!head) {
-      head = next;
-      current = head;
-    } else {
-      current.next = next;
-      current = current.next;
+
+    if (list1 || list2) {
+        cur.next = list1 ? list1 : list2;
     }
-  }
-  return head;
+
+    return dummy.next;
 };
 ```
